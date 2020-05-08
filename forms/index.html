@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+<!-- bootstrap -->
+	<title>Document 3</title>
+	  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	  <link rel="stylesheet" href="/resources/demos/style.css">
+	  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<body>
+	<div class="logo">
+		<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill="#1F2041" fill-opacity="0.25"/>
+			<path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill="#1F2041" fill-opacity="0.25"/>
+			<path d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill="#1F2041" fill-opacity="0.25"/>
+		</svg>
+	</div>
+	
+	<div class="formFind">
+		<form action="">
+			<div class="formFind__title">Найдём номера под ваши пожелания</div>
+			<div class="formFind__left">
+				<label for="date_in" class="formFind__label">Прибытие</label>
+				<br>
+				<input type="date" name="date_in" class="formFind__date">
+			</div>
+			<div class="formFind__right">
+				<label for="date_out" class="formFind__label">Выезд</label>
+				<br>
+				<input type="date" name="date_out" class="formFind__date">
+			</div>
+
+
+		<label for="dropdown_visiters">Гости</label>
+		<div name="dropdown_visiters" class="dropdown">
+			<div class="dropdown__list_visiters">Сколько гостей?</div>
+		   	<div onclick="showDropdown_visiters()" class="dropdown__list-container dropdown__list-container_visiters">
+ 				<img src="./images/expand_more.png" alt="развернуть" class="dropdown__list-container-viewButton">
+ 			</div>
+			<ul class="input__list input__list_visiters">
+				<li class="input__list-cell_visiters">
+			    	<div class="dropdown__left">взрослые</div>
+			    	<div class="dropdown__container">
+			    		<a href="#" onclick="minus(0)" class="minus">&ndash;</a>
+				    	<div  class="tablo">0</div>
+				    	<a href="#"  onclick="plus(0)" class="plus">&plus;</a>
+			    	</div>
+			    </li>
+			    <li class="input__list-cell_visiters">
+					<div class="dropdown__left">дети</div>
+			    	<div class="dropdown__container">
+			    		<a href="#"  onclick="minus(1)" class="minus">&ndash;</a>
+			    		<div class="tablo">0</div>
+			    		<a href="#"  onclick="plus(1)" class="plus">&plus;</a>
+			    	</div>
+			    </li>
+			    <li class="input__list-cell_visiters">
+			    	<div class="dropdown__left">младенцы</div>
+			    	<div class="dropdown__container">
+						<a href="#"  onclick="minus(2)" class="minus">&ndash;</a>
+						<div class="tablo">0</div>
+						<a href="#"  onclick="plus(2)" class="plus">&plus;</a>
+			    	</div>
+			    </li>
+			    <li>
+			    	<button class="button__apply" onclick="apply()">Применить</button>
+			    	<button class="button__reset" onclick="clears()">Очистить</button>
+			    </li>
+		    </ul>
+		</div> 
+		<button class="buttonClickMe__pay">подобрать номер
+			<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="white"/>
+			</svg>
+		</button> 
+		</form>
+	</div>
+
+	<form action="#">
+		<div class="singUp">
+			<h3 class="singUp__title">Регистрация аккаунта</h3>
+			<input type="name" placeholder="Имя" name="name" class="singUp__input">
+			<input type="name" placeholder="Фамилия" name="second name" class="singUp__input">
+
+			<div class="radioButton">
+				<input type="radio" name="radio" class="myradio" id="radio" />
+				<label for="radio">Мужчина</label><br><br>
+				<input type="radio" name="radio" class="myradio" id="radiotw" />
+				<label for="radiotw">Женщина</label>
+			</div>
+			<label for="bithday" class="singUp__bithday-label">ДАТА РОЖДЕНИЯ</label>
+			<br>
+			<input type="date" class="singUp__bithday-input" mask="DD.MM.YY">
+			<label for="bithday" class="singUp__bithday-label">данные для входа в сервис</label>
+			<br>
+			<input type="mail" class="singUp__bithday-mail" placeholder="Email">
+			<input type="password" class="singUp__bithday-password" placeholder="Пароль">
+				<!-- toggle -->
+			<div class="toggle">
+				<div class="toggle__label">Получать спецпредложения</div>
+		        <div class="button r" id="button-1">
+		        	<input type="checkbox" class="checkbox">
+			        <div class="knobs"></div>
+			        <div class="layer"></div>
+		        </div>
+			</div>
+
+			<button class="buttonClickMe__pay buttonClickMe__pay_buy">перейти к оплате
+				<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="white"/>
+				</svg>
+			</button> 
+			<div class="singUp__singIn">
+				<p class="singUp__singIn-text">Уже есть аккаунт на Toxin</p>
+				<button class="singUp__singIn-button">войти</button>
+			</div>
+		</div>
+	</form>
+
+	<form action="#">
+		<div class="book">
+			<span class="book__text">
+				№
+				<span class="book__text-number">888</span>
+				<span class="book__text-type">Люкс</span>
+				<span class="book__text-money">9 990&#8381;
+					<span class="book__text-money-period">в сутки</span>
+				</span>
+			</span>
+		</div>
+
+		<div class="kostil">
+			<div class="formFind__left">
+				<label for="date_in" class="formFind__label">Прибытие</label>
+				<br>
+				<input type="date" name="date_in" class="formFind__date">
+			</div>
+			<div class="formFind__right">
+				<label for="date_out" class="formFind__label">Выезд</label>
+				<br>
+				<input type="date" name="date_out" class="formFind__date">
+			</div>
+		<label for="dropdown_visiters">Гости</label>
+		<div name="dropdown_visiters" class="dropdown">
+			<div class="dropdown__list_visiters">Сколько гостей?</div>
+		   	<div onclick="showDropdown_visiters2()" class="dropdown__list-container dropdown__list-container_visiters">
+ 				<img src="./images/expand_more.png" alt="развернуть" class="dropdown__list-container-viewButton">
+ 			</div>
+			<ul class="input__list input__list_visiters">
+				<li class="input__list-cell_visiters">
+			    	<div class="dropdown__left">взрослые</div>
+			    	<div class="dropdown__container">
+			    		<a href="#" onclick="minus(3)" class="minus">&ndash;</a>
+				    	<div  class="tablo">0</div>
+				    	<a href="#"  onclick="plus(3)" class="plus">&plus;</a>
+			    	</div>
+			    </li>
+			    <li class="input__list-cell_visiters">
+					<div class="dropdown__left">дети</div>
+			    	<div class="dropdown__container">
+			    		<a href="#"  onclick="minus(4)" class="minus">&ndash;</a>
+			    		<div class="tablo">0</div>
+			    		<a href="#"  onclick="plus(4)" class="plus">&plus;</a>
+			    	</div>
+			    </li>
+			    <li class="input__list-cell_visiters">
+			    	<div class="dropdown__left">младенцы</div>
+			    	<div class="dropdown__container">
+						<a href="#"  onclick="minus(5)" class="minus">&ndash;</a>
+						<div class="tablo">0</div>
+						<a href="#"  onclick="plus(5)" class="plus">&plus;</a>
+			    	</div>
+			    </li>
+			    <li>
+			    	<button class="button__apply" onclick="apply2()">Применить</button>
+			    	<button class="button__reset" onclick="clears2()">Очистить</button>
+			    </li>
+		    </ul>
+		</div>
+		<div class="book__result">
+			<div class="book__result-left">
+				<p class="book__result-left-text">9 990₽ х 4 суток</p>
+				<p class="book__result-left-text">Сбор за услуги: скидка 2 179₽<div class="book__result-left-text-icon">i</div></p>
+				<p class="book__result-left-text_last">Сбор за дополнительные услуги</p><div class="book__result-left-text-icon book__result-left-text-icon_two">i</div>
+			</div>
+			<div class="book__result-right">
+				<p class="book__result-right-text">39 960₽</p>
+				<p class="book__result-right-text">0₽</p>
+				<p class="book__result-righ-text">300₽</p>
+			</div>
+			<div class="book__result-final">
+				<div class="book__result-final-text">Итого</div>
+				<div class="book__result-final-zone"> </div>
+				<div class="book__result-final-number">38 081₽</div>
+			</div>
+			<button class="buttonClickMe__pay buttonClickMe__book">Забронировать
+				<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="white"/>
+				</svg>
+			</button> 
+		</div>
+	</form>
+	
+	<form action="#">
+		.
+	</form>
+		<div class="signIn">
+			<h3 class="signIn__title">Войти</h3>
+			<input type="mail" class="singUp__bithday-mail" placeholder="Email">
+			<input type="password" class="singUp__bithday-password" placeholder="Пароль">
+			<button class="buttonClickMe__pay buttonClickMe__singIn">Войти
+				<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="white"/>
+				</svg>
+			</button> 
+			<div class="singUp__singIn">
+				<p class="singUp__singIn-text">Нет аккаунта на Toxin?</p>
+				<button class="singUp__singIn-button">создать</button>
+			</div>
+		</div>
+	<script src="script.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,30 @@
+/*@import "bootstrap/bootstrap";*/
+@import 'styles.css';
+.logo {
+  margin: 30px 0 0 30px;
+}
+
+.listColor {
+  margin: 145 0 0 150;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.listColor__item {
+  margin-bottom: 20px;
+}
+.listColor__item-colorSqure {
+  background-color: red;
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+}
+.listColor__item-text {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 29px;
+}
+
+/*# sourceMappingURL=styles.csss.map */

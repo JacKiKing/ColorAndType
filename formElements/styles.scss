@@ -1,0 +1,3107 @@
+/*@import "bootstrap/bootstrap";*/
+@import "mixins.scss";
+@import "fonts.css";
+.plus, .minus, #minus_0, #minus_1, #minus_2{
+	width: 30px;
+	height: 25px;
+	@include bold_Montserrat;
+	font-weight: normal;
+	font-size: 18px;
+	align-items: center;
+	text-align: center;
+	border: 1px solid rgba(31, 32, 65, 0.5);
+	border-radius: 50%;
+	color: rgba(31, 32, 65, 0.5);
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+}
+.plus, .minus, #minus_0, #minus_1, #minus_2:hover{
+	text-decoration: none;
+}
+
+.minus, #minus_0, #minus_1, #minus_2{
+	border: 1px solid rgba(31, 32, 65, 0.25);
+	color: rgba(31, 32, 65, 0.5);
+}
+#minus_0:disabled {
+	border: 1px solid red;
+}
+
+.logo{
+	width: 48px;
+	height: 48px;
+	left: 30px;
+	top: 30px;
+	position: absolute;
+}
+.dropdown{
+	&__container{
+		float: right;
+		top: 4px;
+		right: 7px;
+		position: relative;
+	}
+
+	&__list{
+		display: flex;
+		width: 266px;
+		height: 44px;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.5);
+		box-sizing: border-box;
+		border-radius: 2px;
+		@include bold_Montserrat;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		margin-bottom: -16px;
+		color: rgba(31, 32, 65, 0.75);
+		padding: 12.44px 0 17.45px 15px;
+
+		&-container{
+			left: 227px;
+			position: relative;
+			top: -26px;
+			width: 40px;
+			height: 40px;
+			cursor: pointer;
+
+			&_visiters{
+				left: 281px;
+				top: -40px;
+			}
+
+			&-viewButton{
+				top: 10px;
+				position: relative;
+				right: -8px;
+				width: 18px;
+				height: 11px;
+
+			}
+
+			&_date{
+				width: 155px;
+				left: 0;
+				top: 0;
+			}
+
+			&_date > img{
+				left: -27px;
+				top: 1px;
+				position: relative;
+			}
+		}
+	
+		&_visiters{
+			background: #FFFFFF;
+			border: 1px solid rgba(31, 32, 65, 0.5);
+			box-sizing: border-box;
+			border-radius: 2px;
+			width: 320px;
+			height: 44px;
+			padding: 12.5px 0 13.5px 15px;
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 18px;
+			color: rgba(31, 32, 65, 0.75);
+		}
+	}
+
+	&__left{
+		float: left;
+		top: 13px;
+		position: relative;
+		margin-left: 15px;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+	}
+	&__input{
+		width: 320px;
+		height: 44px;
+		padding: 13px 0 13px 15px;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 4px;
+		@include bold_Montserrat;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		color: rgba(31, 32, 65, 0.25);
+
+		&:hover, &:focus{
+			font-size: 14px;
+			border: 1px solid rgba(31, 32, 65, 0.5);
+			color: rgba(31, 32, 65, 0.75);
+		}
+	}
+}
+.dropdown>ul>li>div, .dropdown>ul>li>div>div{
+	display: inline-block;
+}
+
+.dropdown>ul>li{
+	@include bold_Montserrat;
+	background: #FFFFFF;
+	box-sizing: border-box;
+	margin-left: -40px;
+}
+
+label{
+	@include bold_Montserrat;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: #1F2041;
+}
+
+.input{
+	&__list{
+		top: -24px;
+		position: relative;
+		display: none;
+		width: 266px;
+		height: 119px;
+		background-color: #FFFFFF;
+		border-bottom: 1px solid rgba(31, 32, 65, 0.5);
+		border-left: 1px solid rgba(31, 32, 65, 0.5);
+		border-right: 1px solid rgba(31, 32, 65, 0.5);		
+		box-sizing: border-box;
+		list-style-type: none;
+
+		&_visiters{
+			width: 320px;
+			height: 159px;
+			top: -40px;
+		}
+
+		&-cell{
+			height: 33%;
+
+					&_visiters{
+						height: 37px;
+					}
+		}
+	}
+	&__date{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 4px;
+		color: rgba(31, 32, 65, 0.75);
+		padding: 11.56px 9px 8.44px 15px;
+		width: 138px;
+	}
+}
+
+.button{
+	&__apply{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #BC9CFF;
+		background-color: #fff;
+		border: 0;
+		padding: 19px 7px 13px 0;
+		float: right;
+		cursor: pointer;
+	}
+
+	&__reset{
+		display: none;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: rgba(31, 32, 65, 0.5);
+		background-color: #fff;
+		border: 0;
+		padding: 19px 0 13px 14px;
+		cursor: pointer;
+	}
+}
+
+.tablo{
+	width: 11px;
+}
+
+.mask-date{
+	background: #FFFFFF;
+	border: 1px solid rgba(31, 32, 65, 0.25);
+	box-sizing: border-box;
+	border-radius: 4px;
+	color: rgba(31, 32, 65, 0.25);
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	width: 320px;
+	height: 44px;
+}
+
+.date{
+	&__calendar{
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 4px;
+		width: 266px;
+		height: 44px;
+		color: rgba(31, 32, 65, 0.75);
+	}
+}
+
+#d{
+	width: 263px;
+	background: #FFFFFF;
+	border: 1px solid rgba(31, 32, 65, 0.25);
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding: 12px 0 8px 15px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	color: rgba(31, 32, 65, 0.75);
+}
+
+.label{
+	&_margin{
+				margin-top: 40.5px;
+			}
+}
+
+.form{
+	&__email{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		color: rgba(31, 32, 65, 0.25);
+		padding: 12px 0 8px 15px;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 4px;
+		width: 263px;
+
+		&-right{
+			width: 40px;
+			height: 40px;
+			position: relative;
+			top: -35px;
+			left: 224px;
+			text-align: center;
+			color: #BC9CFF;
+		}
+	}
+}
+
+.services{
+	margin-top: 45px;
+	width: 206px;
+
+	&__title{
+		cursor: pointer;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #1F2041;
+
+		&-container{
+			display: none;
+			width: 181px;
+		}
+	}
+
+	&__checkbox{
+		margin: 0 10px 10px 0;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		color: rgba(31, 32, 65, 0.5);
+	}
+}
+
+input[type="checkbox"], input[type="radio"]{
+	margin-right: 10px;
+}
+
+/*dignities*/
+
+.dignities{
+	font-family: Montserrat;
+	font-style: normal;
+	width: 280px;
+	font-size: 14px;
+	line-height: 24px;
+
+	/* or 171% */
+
+	/* Dark 75% */
+	color: rgba(31, 32, 65, 0.75);
+
+	&__block{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+		margin-top: 23px;
+
+		&-img{
+			width: 48px;
+			height: 48px;
+			margin-right: 10px;
+		}
+		
+		&-text{
+			&-title{
+				font-weight: bold;
+			}
+
+			&-subtext{
+				margin-bottom: 17px;
+			}
+			
+		}
+	}
+}
+
+.checkboxConteiner{
+	position: absolute;
+	top: 143px;
+	left: 587px;
+
+	&>.services__checkbox{
+		width: 192px;
+		display: flex;
+	}
+}
+
+.container{
+	margin: 0;
+    width: 370px;
+    left: 141px;
+    top: 143px;
+    position: relative;
+}
+
+/* radio button*/
+.radioButton{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	position: absolute;
+	left: 587px;
+	top: 313px;
+	margin-bottom: 40.56px;
+}
+
+.myradio {
+  vertical-align: center;
+  width: 20px;
+  height: 20px;
+  margin: 0 3px 0 0;
+}
+.myradio + label {
+  cursor: pointer;
+}
+.myradio:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.myradio:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 35px;
+  margin-right: 20px;
+}
+.myradio:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #FFF;
+}
+.myradio:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.5);
+  opacity: 0;
+  transition: all .2s;
+}
+.myradio:checked + label:after {
+  opacity: 1;
+}
+.myradio:focus + label:before {
+  box-shadow: 0 0 3px 3px rgba(45,182,216,.3);
+}
+
+
+/*Toogle*/
+
+/* CSS rules are kept repetitive so that you can get CSS rules for each button easily :) */
+
+.toggle{
+
+	top: 404.56px;
+	left: 587px;
+	position: absolute;
+		&__title{
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 12px;
+			line-height: 15px;
+			text-transform: uppercase;
+			color: #1F2041;
+			margin-bottom: 16px;
+		}
+		
+		&__label{
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 24px;
+			margin-left: 50px;
+			color: rgba(31, 32, 65, 0.75);
+			top: 1px;
+			position: relative;
+	}
+}
+
+
+
+
+
+
+*
+{
+    user-select: none;
+    -webkit-tap-highlight-color:transparent;
+}
+
+*:focus
+{
+    outline: none;
+}
+
+#app-cover
+{
+    display: table;
+    width: 600px;
+    margin: 80px auto;
+    counter-reset: button-counter;
+}
+
+.toggle-button-cover
+{
+    display: table-cell;
+    position: relative;
+    width: 200px;
+    height: 140px;
+    box-sizing: border-box;
+}
+
+.button-cover
+{
+    height: 100px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px -8px #c5d6d6;
+    border-radius: 4px;
+}
+
+.button-cover:before
+{
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+}
+
+.button-cover, .knobs, .layer
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button
+{
+    position: relative;
+    top: 50%;
+    width: 40px;
+    height: 20px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+}
+
+.button.r, .button.r .layer
+{
+    border-radius: 100px;
+    float: left;
+
+}
+
+.button.b2
+{
+    border-radius: 2px;
+}
+
+.checkbox
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs
+{
+    z-index: 2;
+}
+
+.layer
+{
+    width: 100%;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+/* Button 1 */
+#button-1 .knobs:before
+{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    background: rgba(31, 32, 65, 0.25);
+    border-radius: 50%;
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#button-1 .checkbox:checked + .knobs:before
+{
+    content: '';
+    left: 24px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+#button-1 .checkbox:checked ~ .layer
+{
+    background-color: #fff;
+    border: 1px solid #BC9CFF;
+}
+
+#button-1 .knobs, #button-1 .knobs:before, #button-1 .layer
+{
+    transition: 0.3s ease all;
+}
+
+/*like button*/
+
+.likeButton{
+	left: 587px;
+	top: 534px;
+	position: absolute;
+
+	&__title{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #1F2041;
+		margin-bottom: 16px;
+	}
+
+	&__button{
+		cursor: pointer;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 10px;
+		width: 40px;
+		height: 20px;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		line-height: 12px;
+		text-align: center;
+		color: rgba(31, 32, 65, 0.25);
+		padding: 3px 12px 4px 3px;
+
+		&-img{
+			float: left;
+			top: 2px;
+			position: relative;
+			left: 3px;
+			display: block;
+
+		&_active{
+			display: none;
+		}
+	}
+
+		&-scoore{
+			display: inline-block;
+		}
+	}
+}
+
+
+/*stars rateButton*/
+$unchecked-star: '\2606';
+$unchecked-color: #888;
+$checked-star: '\2605';
+$checked-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+.star-cb-group {
+  /* remove inline-block whitespace */
+  	font-size: 0;
+  	left: -7px;
+	position: relative;
+  * {
+    font-size: 1rem;
+  }
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  & > input {
+    display: none;
+    & + label {
+      /* only enough room for the star */
+      display: inline-block;
+      text-indent: 9999px;
+      width: 1em;
+      white-space: nowrap;
+      cursor: pointer;
+      &:before {
+        display: inline-block;
+        text-indent: -9999px;
+        content: $unchecked-star;
+        color: #8BA4F9;
+      }
+    }
+    &:checked ~ label:before,
+      & + label:hover ~ label:before,
+      & + label:hover:before {
+      content: $checked-star;
+      color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      text-shadow: 0 0 1px #333;
+    }
+  }
+  
+  /* the hidden clearer */
+  & > .star-cb-clear + label {
+    text-indent: -9999px;
+    width: .5em;
+    margin-left: -.5em;
+  }
+  & > .star-cb-clear + label:before {
+    width: .5em;
+  }
+
+  &:hover > input + label:before {
+    content: $unchecked-star;
+    color: #8BA4F9;
+    text-shadow: none;
+  }
+  &:hover > input + label:hover ~ label:before,
+  &:hover > input + label:hover:before {
+    content: #8BA4F9;
+    color: #8BA4F9;
+    text-shadow: 0 0 1px #8BA4F9;
+  }
+}
+
+// extra styles
+:root {
+  font-size: 2em;
+  font-family: Helvetica, arial, sans-serif;
+}
+
+fieldset {
+  border: 0;
+  width: 5em;
+  border-radius: 1px;
+  padding: 1em 1.5em 0.9em;
+  margin: 1em auto;
+}
+#log {
+  margin: 1em auto;
+  width: 5em;
+  text-align: center;
+  background: #8BA4F9;
+}
+h1 {
+  text-align: center;
+}
+
+.rateButton{
+
+	&__form{
+		left: 587px;
+		top: 656px;
+		position: absolute;
+	}
+
+	&__title{
+		display: block;
+		margin-bottom: 16px;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #1F2041;
+	}
+}
+
+.richCHebox{
+	position: relative;
+	left: 587px;
+	width: 250px;
+
+	&__title{
+		@include title;
+	}
+
+	&__checkbox{
+
+		&>input{
+			float: left;
+		}
+
+		&-title{
+			width: 230px;
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 14px;
+			line-height: 18px;
+			color: rgba(31, 32, 65, 0.75);
+			margin: 0 0 5px 0; 
+		}
+
+		&-subtitle{
+			width: 247px;
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			line-height: 14px;
+			color: rgba(31, 32, 65, 0.5);
+			padding-left: 24px;
+			margin: 0;
+
+			&_width{
+				width: 230px;	
+			}
+		}
+
+		&-text{
+			padding-top: 2px;
+			margin-bottom: 11px;
+		}
+	}
+}
+.richCHeboxConteiner{
+	margin-bottom: 232px;
+}
+
+
+/*coment*/
+
+
+.comment{
+
+	&__leftBlock{
+		float: left;
+		height: 140px;
+		
+		&>img{
+			width: 88px;
+			height: 88px;
+		}
+
+		&-img{
+			&>.likeButton{
+				left: 22px;
+				top: -13px;
+				position: relative;
+			}
+		}
+	}
+
+	&__rightBlock{
+		width: 653px;
+		height: 72px;
+	}
+
+	&__title{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 24px;
+		color: rgba(31, 32, 65, 0.75);
+		margin-bottom: 12px;
+	}
+
+	&__subtext{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		color: rgba(31, 32, 65, 0.75);
+		margin-bottom: 12px;
+	}
+
+	&__text{
+		width: 728px;
+		height: 72px;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		color: rgba(31, 32, 65, 0.75)
+	}
+}
+
+/*BUTTONS*/
+
+.clickMe{
+	width: 99px;
+	height: 44px;
+	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	border-radius: 22px;
+	text-transform: uppercase;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 15px;
+	color: #fff;
+	border: none;
+
+	&:hover{
+		color: #BC9CFF;
+		border:  2px solid #8BA4F9;
+		background: #fff;
+	}
+}/*@import "bootstrap/bootstrap";*/
+@import "mixins.scss";
+@import "fonts.css";
+.plus, .minus, #minus_0, #minus_1, #minus_2{
+	width: 30px;
+	height: 25px;
+	@include bold_Montserrat;
+	font-weight: normal;
+	font-size: 18px;
+	align-items: center;
+	text-align: center;
+	border: 1px solid rgba(31, 32, 65, 0.5);
+	border-radius: 50%;
+	color: rgba(31, 32, 65, 0.5);
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+}
+.plus, .minus, #minus_0, #minus_1, #minus_2:hover{
+	text-decoration: none;
+}
+
+.minus, #minus_0, #minus_1, #minus_2{
+	border: 1px solid rgba(31, 32, 65, 0.25);
+	color: rgba(31, 32, 65, 0.5);
+}
+#minus_0:disabled {
+	border: 1px solid red;
+}
+
+.logo{
+	width: 48px;
+	height: 48px;
+	left: 30px;
+	top: 30px;
+	position: absolute;
+}
+.dropdown{
+	&__container{
+		float: right;
+		top: 4px;
+		right: 7px;
+		position: relative;
+	}
+
+	&__list{
+		display: flex;
+		width: 266px;
+		height: 44px;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.5);
+		box-sizing: border-box;
+		border-radius: 2px;
+		@include bold_Montserrat;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		margin-bottom: -16px;
+		color: rgba(31, 32, 65, 0.75);
+		padding: 12.44px 0 17.45px 15px;
+
+		&-container{
+			left: 227px;
+			position: relative;
+			top: -26px;
+			width: 40px;
+			height: 40px;
+			cursor: pointer;
+
+			&_visiters{
+				left: 281px;
+				top: -40px;
+			}
+
+			&-viewButton{
+				top: 10px;
+				position: relative;
+				right: -8px;
+				width: 18px;
+				height: 11px;
+
+			}
+
+			&_date{
+				width: 155px;
+				left: 0;
+				top: 0;
+			}
+
+			&_date > img{
+				left: -27px;
+				top: 1px;
+				position: relative;
+			}
+		}
+	
+		&_visiters{
+			background: #FFFFFF;
+			border: 1px solid rgba(31, 32, 65, 0.5);
+			box-sizing: border-box;
+			border-radius: 2px;
+			width: 320px;
+			height: 44px;
+			padding: 12.5px 0 13.5px 15px;
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 18px;
+			color: rgba(31, 32, 65, 0.75);
+		}
+	}
+
+	&__left{
+		float: left;
+		top: 13px;
+		position: relative;
+		margin-left: 15px;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+	}
+	&__input{
+		width: 320px;
+		height: 44px;
+		padding: 13px 0 13px 15px;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 4px;
+		@include bold_Montserrat;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		color: rgba(31, 32, 65, 0.25);
+
+		&:hover, &:focus{
+			font-size: 14px;
+			border: 1px solid rgba(31, 32, 65, 0.5);
+			color: rgba(31, 32, 65, 0.75);
+		}
+	}
+}
+.dropdown>ul>li>div, .dropdown>ul>li>div>div{
+	display: inline-block;
+}
+
+.dropdown>ul>li{
+	@include bold_Montserrat;
+	background: #FFFFFF;
+	box-sizing: border-box;
+	margin-left: -40px;
+}
+
+label{
+	@include bold_Montserrat;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: #1F2041;
+}
+
+.input{
+	&__list{
+		top: -24px;
+		position: relative;
+		display: none;
+		width: 266px;
+		height: 119px;
+		background-color: #FFFFFF;
+		border-bottom: 1px solid rgba(31, 32, 65, 0.5);
+		border-left: 1px solid rgba(31, 32, 65, 0.5);
+		border-right: 1px solid rgba(31, 32, 65, 0.5);		
+		box-sizing: border-box;
+		list-style-type: none;
+
+		&_visiters{
+			width: 320px;
+			height: 159px;
+			top: -40px;
+		}
+
+		&-cell{
+			height: 33%;
+
+					&_visiters{
+						height: 37px;
+					}
+		}
+	}
+	&__date{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 4px;
+		color: rgba(31, 32, 65, 0.75);
+		padding: 11.56px 9px 8.44px 15px;
+		width: 138px;
+	}
+}
+
+.button{
+	&__apply{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #BC9CFF;
+		background-color: #fff;
+		border: 0;
+		padding: 19px 7px 13px 0;
+		float: right;
+		cursor: pointer;
+	}
+
+	&__reset{
+		display: none;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: rgba(31, 32, 65, 0.5);
+		background-color: #fff;
+		border: 0;
+		padding: 19px 0 13px 14px;
+		cursor: pointer;
+	}
+}
+
+.tablo{
+	width: 11px;
+}
+
+.mask-date{
+	background: #FFFFFF;
+	border: 1px solid rgba(31, 32, 65, 0.25);
+	box-sizing: border-box;
+	border-radius: 4px;
+	color: rgba(31, 32, 65, 0.25);
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	width: 320px;
+	height: 44px;
+}
+
+.date{
+	&__calendar{
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 4px;
+		width: 266px;
+		height: 44px;
+		color: rgba(31, 32, 65, 0.75);
+	}
+}
+
+#d{
+	width: 263px;
+	background: #FFFFFF;
+	border: 1px solid rgba(31, 32, 65, 0.25);
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding: 12px 0 8px 15px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	color: rgba(31, 32, 65, 0.75);
+}
+
+.label{
+	&_margin{
+				margin-top: 40.5px;
+			}
+}
+
+.form{
+	&__email{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		color: rgba(31, 32, 65, 0.25);
+		padding: 12px 0 8px 15px;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 4px;
+		width: 263px;
+
+		&-right{
+			width: 40px;
+			height: 40px;
+			position: relative;
+			top: -35px;
+			left: 224px;
+			text-align: center;
+			color: #BC9CFF;
+		}
+	}
+}
+
+.services{
+	margin-top: 45px;
+	width: 206px;
+
+	&__title{
+		cursor: pointer;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #1F2041;
+
+		&-container{
+			display: none;
+			width: 181px;
+		}
+	}
+
+	&__checkbox{
+		margin: 0 10px 10px 0;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		color: rgba(31, 32, 65, 0.5);
+	}
+}
+
+input[type="checkbox"], input[type="radio"]{
+	margin-right: 10px;
+}
+
+/*dignities*/
+
+.dignities{
+	font-family: Montserrat;
+	font-style: normal;
+	width: 280px;
+	font-size: 14px;
+	line-height: 24px;
+
+	/* or 171% */
+
+	/* Dark 75% */
+	color: rgba(31, 32, 65, 0.75);
+
+	&__block{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+		margin-top: 23px;
+
+		&-img{
+			width: 48px;
+			height: 48px;
+			margin-right: 10px;
+		}
+		
+		&-text{
+			&-title{
+				font-weight: bold;
+			}
+
+			&-subtext{
+				margin-bottom: 17px;
+			}
+			
+		}
+	}
+}
+
+.checkboxConteiner{
+	position: absolute;
+	top: 143px;
+	left: 587px;
+
+	&>.services__checkbox{
+		width: 192px;
+		display: flex;
+	}
+}
+
+.container{
+	margin: 0;
+    width: 370px;
+    left: 141px;
+    top: 143px;
+    position: relative;
+}
+
+/* radio button*/
+.radioButton{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	position: absolute;
+	left: 587px;
+	top: 313px;
+	margin-bottom: 40.56px;
+}
+
+.myradio {
+  vertical-align: center;
+  width: 20px;
+  height: 20px;
+  margin: 0 3px 0 0;
+}
+.myradio + label {
+  cursor: pointer;
+}
+.myradio:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.myradio:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 35px;
+  margin-right: 20px;
+}
+.myradio:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #FFF;
+}
+.myradio:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.5);
+  opacity: 0;
+  transition: all .2s;
+}
+.myradio:checked + label:after {
+  opacity: 1;
+}
+.myradio:focus + label:before {
+  box-shadow: 0 0 3px 3px rgba(45,182,216,.3);
+}
+
+
+/*Toogle*/
+
+/* CSS rules are kept repetitive so that you can get CSS rules for each button easily :) */
+
+.toggle{
+
+	top: 404.56px;
+	left: 587px;
+	position: absolute;
+		&__title{
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 12px;
+			line-height: 15px;
+			text-transform: uppercase;
+			color: #1F2041;
+			margin-bottom: 16px;
+		}
+		
+		&__label{
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 24px;
+			margin-left: 50px;
+			color: rgba(31, 32, 65, 0.75);
+			top: 1px;
+			position: relative;
+	}
+}
+
+
+
+
+
+
+*
+{
+    user-select: none;
+    -webkit-tap-highlight-color:transparent;
+}
+
+*:focus
+{
+    outline: none;
+}
+
+#app-cover
+{
+    display: table;
+    width: 600px;
+    margin: 80px auto;
+    counter-reset: button-counter;
+}
+
+.toggle-button-cover
+{
+    display: table-cell;
+    position: relative;
+    width: 200px;
+    height: 140px;
+    box-sizing: border-box;
+}
+
+.button-cover
+{
+    height: 100px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px -8px #c5d6d6;
+    border-radius: 4px;
+}
+
+.button-cover:before
+{
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+}
+
+.button-cover, .knobs, .layer
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button
+{
+    position: relative;
+    top: 50%;
+    width: 40px;
+    height: 20px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+}
+
+.button.r, .button.r .layer
+{
+    border-radius: 100px;
+    float: left;
+
+}
+
+.button.b2
+{
+    border-radius: 2px;
+}
+
+.checkbox
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs
+{
+    z-index: 2;
+}
+
+.layer
+{
+    width: 100%;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+/* Button 1 */
+#button-1 .knobs:before
+{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    background: rgba(31, 32, 65, 0.25);
+    border-radius: 50%;
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#button-1 .checkbox:checked + .knobs:before
+{
+    content: '';
+    left: 24px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+#button-1 .checkbox:checked ~ .layer
+{
+    background-color: #fff;
+    border: 1px solid #BC9CFF;
+}
+
+#button-1 .knobs, #button-1 .knobs:before, #button-1 .layer
+{
+    transition: 0.3s ease all;
+}
+
+/*like button*/
+
+.likeButton{
+	left: 587px;
+	top: 534px;
+	position: absolute;
+
+	&__title{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #1F2041;
+		margin-bottom: 16px;
+	}
+
+	&__button{
+		cursor: pointer;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 10px;
+		width: 40px;
+		height: 20px;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		line-height: 12px;
+		text-align: center;
+		color: rgba(31, 32, 65, 0.25);
+		padding: 3px 12px 4px 3px;
+
+		&-img{
+			float: left;
+			top: 2px;
+			position: relative;
+			left: 3px;
+			display: block;
+
+		&_active{
+			display: none;
+		}
+	}
+
+		&-scoore{
+			display: inline-block;
+		}
+	}
+}
+
+
+/*stars rateButton*/
+$unchecked-star: '\2606';
+$unchecked-color: #888;
+$checked-star: '\2605';
+$checked-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+.star-cb-group {
+  /* remove inline-block whitespace */
+  	font-size: 0;
+  	left: -7px;
+	position: relative;
+  * {
+    font-size: 1rem;
+  }
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  & > input {
+    display: none;
+    & + label {
+      /* only enough room for the star */
+      display: inline-block;
+      text-indent: 9999px;
+      width: 1em;
+      white-space: nowrap;
+      cursor: pointer;
+      &:before {
+        display: inline-block;
+        text-indent: -9999px;
+        content: $unchecked-star;
+        color: #8BA4F9;
+      }
+    }
+    &:checked ~ label:before,
+      & + label:hover ~ label:before,
+      & + label:hover:before {
+      content: $checked-star;
+      color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      text-shadow: 0 0 1px #333;
+    }
+  }
+  
+  /* the hidden clearer */
+  & > .star-cb-clear + label {
+    text-indent: -9999px;
+    width: .5em;
+    margin-left: -.5em;
+  }
+  & > .star-cb-clear + label:before {
+    width: .5em;
+  }
+
+  &:hover > input + label:before {
+    content: $unchecked-star;
+    color: #8BA4F9;
+    text-shadow: none;
+  }
+  &:hover > input + label:hover ~ label:before,
+  &:hover > input + label:hover:before {
+    content: #8BA4F9;
+    color: #8BA4F9;
+    text-shadow: 0 0 1px #8BA4F9;
+  }
+}
+
+// extra styles
+:root {
+  font-size: 2em;
+  font-family: Helvetica, arial, sans-serif;
+}
+
+fieldset {
+  border: 0;
+  width: 5em;
+  border-radius: 1px;
+  padding: 1em 1.5em 0.9em;
+  margin: 1em auto;
+}
+#log {
+  margin: 1em auto;
+  width: 5em;
+  text-align: center;
+  background: #8BA4F9;
+}
+h1 {
+  text-align: center;
+}
+
+.rateButton{
+
+	&__form{
+		left: 587px;
+		top: 656px;
+		position: absolute;
+	}
+
+	&__title{
+		display: block;
+		margin-bottom: 16px;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #1F2041;
+	}
+}
+
+.richCHebox{
+	position: relative;
+	left: 587px;
+	width: 250px;
+
+	&__title{
+		@include title;
+	}
+
+	&__checkbox{
+
+		&>input{
+			float: left;
+		}
+
+		&-title{
+			width: 230px;
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 14px;
+			line-height: 18px;
+			color: rgba(31, 32, 65, 0.75);
+			margin: 0 0 5px 0; 
+		}
+
+		&-subtitle{
+			width: 247px;
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			line-height: 14px;
+			color: rgba(31, 32, 65, 0.5);
+			padding-left: 24px;
+			margin: 0;
+
+			&_width{
+				width: 230px;	
+			}
+		}
+
+		&-text{
+			padding-top: 2px;
+			margin-bottom: 11px;
+		}
+	}
+}/*@import "bootstrap/bootstrap";*/
+@import "mixins.scss";
+@import "fonts.css";
+.plus, .minus, #minus_0, #minus_1, #minus_2{
+	width: 30px;
+	height: 25px;
+	@include bold_Montserrat;
+	font-weight: normal;
+	font-size: 18px;
+	align-items: center;
+	text-align: center;
+	border: 1px solid rgba(31, 32, 65, 0.5);
+	border-radius: 50%;
+	color: rgba(31, 32, 65, 0.5);
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+}
+.plus, .minus, #minus_0, #minus_1, #minus_2:hover{
+	text-decoration: none;
+}
+
+.minus, #minus_0, #minus_1, #minus_2{
+	border: 1px solid rgba(31, 32, 65, 0.25);
+	color: rgba(31, 32, 65, 0.5);
+}
+#minus_0:disabled {
+	border: 1px solid red;
+}
+
+.logo{
+	width: 48px;
+	height: 48px;
+	left: 30px;
+	top: 30px;
+	position: absolute;
+}
+.dropdown{
+	&__container{
+		float: right;
+		top: 4px;
+		right: 7px;
+		position: relative;
+	}
+
+	&__list{
+		display: flex;
+		width: 266px;
+		height: 44px;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.5);
+		box-sizing: border-box;
+		border-radius: 2px;
+		@include bold_Montserrat;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		margin-bottom: -16px;
+		color: rgba(31, 32, 65, 0.75);
+		padding: 12.44px 0 17.45px 15px;
+
+		&-container{
+			left: 227px;
+			position: relative;
+			top: -26px;
+			width: 40px;
+			height: 40px;
+			cursor: pointer;
+
+			&_visiters{
+				left: 281px;
+				top: -40px;
+			}
+
+			&-viewButton{
+				top: 10px;
+				position: relative;
+				right: -8px;
+				width: 18px;
+				height: 11px;
+
+			}
+
+			&_date{
+				width: 155px;
+				left: 0;
+				top: 0;
+			}
+
+			&_date > img{
+				left: -27px;
+				top: 1px;
+				position: relative;
+			}
+		}
+	
+		&_visiters{
+			background: #FFFFFF;
+			border: 1px solid rgba(31, 32, 65, 0.5);
+			box-sizing: border-box;
+			border-radius: 2px;
+			width: 320px;
+			height: 44px;
+			padding: 12.5px 0 13.5px 15px;
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 18px;
+			color: rgba(31, 32, 65, 0.75);
+		}
+	}
+
+	&__left{
+		float: left;
+		top: 13px;
+		position: relative;
+		margin-left: 15px;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+	}
+	&__input{
+		width: 320px;
+		height: 44px;
+		padding: 13px 0 13px 15px;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 4px;
+		@include bold_Montserrat;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		color: rgba(31, 32, 65, 0.25);
+
+		&:hover, &:focus{
+			font-size: 14px;
+			border: 1px solid rgba(31, 32, 65, 0.5);
+			color: rgba(31, 32, 65, 0.75);
+		}
+	}
+}
+.dropdown>ul>li>div, .dropdown>ul>li>div>div{
+	display: inline-block;
+}
+
+.dropdown>ul>li{
+	@include bold_Montserrat;
+	background: #FFFFFF;
+	box-sizing: border-box;
+	margin-left: -40px;
+}
+
+label{
+	@include bold_Montserrat;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: #1F2041;
+}
+
+.input{
+	&__list{
+		top: -24px;
+		position: relative;
+		display: none;
+		width: 266px;
+		height: 119px;
+		background-color: #FFFFFF;
+		border-bottom: 1px solid rgba(31, 32, 65, 0.5);
+		border-left: 1px solid rgba(31, 32, 65, 0.5);
+		border-right: 1px solid rgba(31, 32, 65, 0.5);		
+		box-sizing: border-box;
+		list-style-type: none;
+
+		&_visiters{
+			width: 320px;
+			height: 159px;
+			top: -40px;
+		}
+
+		&-cell{
+			height: 33%;
+
+					&_visiters{
+						height: 37px;
+					}
+		}
+	}
+	&__date{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 4px;
+		color: rgba(31, 32, 65, 0.75);
+		padding: 11.56px 9px 8.44px 15px;
+		width: 138px;
+	}
+}
+
+.button{
+	&__apply{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #BC9CFF;
+		background-color: #fff;
+		border: 0;
+		padding: 19px 7px 13px 0;
+		float: right;
+		cursor: pointer;
+	}
+
+	&__reset{
+		display: none;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: rgba(31, 32, 65, 0.5);
+		background-color: #fff;
+		border: 0;
+		padding: 19px 0 13px 14px;
+		cursor: pointer;
+	}
+}
+
+.tablo{
+	width: 11px;
+}
+
+.mask-date{
+	background: #FFFFFF;
+	border: 1px solid rgba(31, 32, 65, 0.25);
+	box-sizing: border-box;
+	border-radius: 4px;
+	color: rgba(31, 32, 65, 0.25);
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	width: 320px;
+	height: 44px;
+}
+
+.date{
+	&__calendar{
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 4px;
+		width: 266px;
+		height: 44px;
+		color: rgba(31, 32, 65, 0.75);
+	}
+}
+
+#d{
+	width: 263px;
+	background: #FFFFFF;
+	border: 1px solid rgba(31, 32, 65, 0.25);
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding: 12px 0 8px 15px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	color: rgba(31, 32, 65, 0.75);
+}
+
+.label{
+	&_margin{
+				margin-top: 40.5px;
+			}
+}
+
+.form{
+	&__email{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		color: rgba(31, 32, 65, 0.25);
+		padding: 12px 0 8px 15px;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 4px;
+		width: 263px;
+
+		&-right{
+			width: 40px;
+			height: 40px;
+			position: relative;
+			top: -35px;
+			left: 224px;
+			text-align: center;
+			color: #BC9CFF;
+		}
+	}
+}
+
+.services{
+	margin-top: 45px;
+	width: 206px;
+
+	&__title{
+		cursor: pointer;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #1F2041;
+
+		&-container{
+			display: none;
+			width: 181px;
+		}
+	}
+
+	&__checkbox{
+		margin: 0 10px 10px 0;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		color: rgba(31, 32, 65, 0.5);
+	}
+}
+
+input[type="checkbox"], input[type="radio"]{
+	margin-right: 10px;
+}
+
+/*dignities*/
+
+.dignities{
+	font-family: Montserrat;
+	font-style: normal;
+	width: 280px;
+	font-size: 14px;
+	line-height: 24px;
+
+	/* or 171% */
+
+	/* Dark 75% */
+	color: rgba(31, 32, 65, 0.75);
+
+	&__block{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+		margin-top: 23px;
+
+		&-img{
+			width: 48px;
+			height: 48px;
+			margin-right: 10px;
+		}
+		
+		&-text{
+			&-title{
+				font-weight: bold;
+			}
+
+			&-subtext{
+				margin-bottom: 17px;
+			}
+			
+		}
+	}
+}
+
+.checkboxConteiner{
+	position: absolute;
+	top: 143px;
+	left: 587px;
+
+	&>.services__checkbox{
+		width: 192px;
+		display: flex;
+	}
+}
+
+.container{
+	margin: 0;
+    width: 370px;
+    left: 141px;
+    top: 143px;
+    position: relative;
+}
+
+/* radio button*/
+.radioButton{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	position: absolute;
+	left: 587px;
+	top: 313px;
+	margin-bottom: 40.56px;
+}
+
+.myradio {
+  vertical-align: center;
+  width: 20px;
+  height: 20px;
+  margin: 0 3px 0 0;
+}
+.myradio + label {
+  cursor: pointer;
+}
+.myradio:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.myradio:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 35px;
+  margin-right: 20px;
+}
+.myradio:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #FFF;
+}
+.myradio:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.5);
+  opacity: 0;
+  transition: all .2s;
+}
+.myradio:checked + label:after {
+  opacity: 1;
+}
+.myradio:focus + label:before {
+  box-shadow: 0 0 3px 3px rgba(45,182,216,.3);
+}
+
+
+/*Toogle*/
+
+/* CSS rules are kept repetitive so that you can get CSS rules for each button easily :) */
+
+.toggle{
+
+	top: 404.56px;
+	left: 587px;
+	position: absolute;
+		&__title{
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 12px;
+			line-height: 15px;
+			text-transform: uppercase;
+			color: #1F2041;
+			margin-bottom: 16px;
+		}
+		
+		&__label{
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 24px;
+			margin-left: 50px;
+			color: rgba(31, 32, 65, 0.75);
+			top: 1px;
+			position: relative;
+	}
+}
+
+
+
+
+
+
+*
+{
+    user-select: none;
+    -webkit-tap-highlight-color:transparent;
+}
+
+*:focus
+{
+    outline: none;
+}
+
+#app-cover
+{
+    display: table;
+    width: 600px;
+    margin: 80px auto;
+    counter-reset: button-counter;
+}
+
+.toggle-button-cover
+{
+    display: table-cell;
+    position: relative;
+    width: 200px;
+    height: 140px;
+    box-sizing: border-box;
+}
+
+.button-cover
+{
+    height: 100px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px -8px #c5d6d6;
+    border-radius: 4px;
+}
+
+.button-cover:before
+{
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+}
+
+.button-cover, .knobs, .layer
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button
+{
+    position: relative;
+    top: 50%;
+    width: 40px;
+    height: 20px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+}
+
+.button.r, .button.r .layer
+{
+    border-radius: 100px;
+    float: left;
+
+}
+
+.button.b2
+{
+    border-radius: 2px;
+}
+
+.checkbox
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs
+{
+    z-index: 2;
+}
+
+.layer
+{
+    width: 100%;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+/* Button 1 */
+#button-1 .knobs:before
+{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    background: rgba(31, 32, 65, 0.25);
+    border-radius: 50%;
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#button-1 .checkbox:checked + .knobs:before
+{
+    content: '';
+    left: 24px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+#button-1 .checkbox:checked ~ .layer
+{
+    background-color: #fff;
+    border: 1px solid #BC9CFF;
+}
+
+#button-1 .knobs, #button-1 .knobs:before, #button-1 .layer
+{
+    transition: 0.3s ease all;
+}
+
+/*like button*/
+
+.likeButton{
+	left: 587px;
+	top: 534px;
+	position: absolute;
+
+	&__title{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #1F2041;
+		margin-bottom: 16px;
+	}
+
+	&__button{
+		cursor: pointer;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 10px;
+		width: 40px;
+		height: 20px;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		line-height: 12px;
+		text-align: center;
+		color: rgba(31, 32, 65, 0.25);
+		padding: 3px 12px 4px 3px;
+
+		&-img{
+			float: left;
+			top: 2px;
+			position: relative;
+			left: 3px;
+			display: block;
+
+		&_active{
+			display: none;
+		}
+	}
+
+		&-scoore{
+			display: inline-block;
+		}
+	}
+}
+
+
+/*stars rateButton*/
+$unchecked-star: '\2606';
+$unchecked-color: #888;
+$checked-star: '\2605';
+$checked-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+.star-cb-group {
+  /* remove inline-block whitespace */
+  	font-size: 0;
+  	left: -7px;
+	position: relative;
+  * {
+    font-size: 1rem;
+  }
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  & > input {
+    display: none;
+    & + label {
+      /* only enough room for the star */
+      display: inline-block;
+      text-indent: 9999px;
+      width: 1em;
+      white-space: nowrap;
+      cursor: pointer;
+      &:before {
+        display: inline-block;
+        text-indent: -9999px;
+        content: $unchecked-star;
+        color: #8BA4F9;
+      }
+    }
+    &:checked ~ label:before,
+      & + label:hover ~ label:before,
+      & + label:hover:before {
+      content: $checked-star;
+      color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      text-shadow: 0 0 1px #333;
+    }
+  }
+  
+  /* the hidden clearer */
+  & > .star-cb-clear + label {
+    text-indent: -9999px;
+    width: .5em;
+    margin-left: -.5em;
+  }
+  & > .star-cb-clear + label:before {
+    width: .5em;
+  }
+
+  &:hover > input + label:before {
+    content: $unchecked-star;
+    color: #8BA4F9;
+    text-shadow: none;
+  }
+  &:hover > input + label:hover ~ label:before,
+  &:hover > input + label:hover:before {
+    content: #8BA4F9;
+    color: #8BA4F9;
+    text-shadow: 0 0 1px #8BA4F9;
+  }
+}
+
+// extra styles
+:root {
+  font-size: 2em;
+  font-family: Helvetica, arial, sans-serif;
+}
+
+fieldset {
+  border: 0;
+  width: 5em;
+  border-radius: 1px;
+  padding: 1em 1.5em 0.9em;
+  margin: 1em auto;
+}
+#log {
+  margin: 1em auto;
+  width: 5em;
+  text-align: center;
+  background: #8BA4F9;
+}
+h1 {
+  text-align: center;
+}
+
+.rateButton{
+
+	&__form{
+		left: 587px;
+		top: 656px;
+		position: absolute;
+	}
+
+	&__title{
+		display: block;
+		margin-bottom: 16px;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #1F2041;
+	}
+}
+
+.richCHebox{
+	position: relative;
+	left: 587px;
+	width: 250px;
+
+	&__title{
+		@include title;
+	}
+
+	&__checkbox{
+
+		&>input{
+			float: left;
+		}
+
+		&-title{
+			width: 230px;
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 14px;
+			line-height: 18px;
+			color: rgba(31, 32, 65, 0.75);
+			margin: 0 0 5px 0; 
+		}
+
+		&-subtitle{
+			width: 247px;
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			line-height: 14px;
+			color: rgba(31, 32, 65, 0.5);
+			padding-left: 24px;
+			margin: 0;
+
+			&_width{
+				width: 230px;	
+			}
+		}
+
+		&-text{
+			padding-top: 2px;
+			margin-bottom: 11px;
+		}
+	}
+}
+.richCHeboxConteiner{
+	margin-bottom: 232px;
+}
+
+
+/*coment*/
+
+
+.comment{
+	
+	position: absolute;
+	left: 600px;
+
+	&__leftBlock{
+		float: left;
+		height: 140px;
+		
+		&>img{
+			width: 88px;
+			height: 88px;
+		}
+
+		&-img{
+			&>.likeButton{
+				left: 22px;
+				top: -13px;
+				position: relative;
+			}
+		}
+	}
+
+	&__rightBlock{
+		width: 653px;
+		height: 72px;
+	}
+
+	&__title{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 24px;
+		color: rgba(31, 32, 65, 0.75);
+		margin-bottom: 12px;
+	}
+
+	&__subtext{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		color: rgba(31, 32, 65, 0.75);
+		margin-bottom: 12px;
+	}
+
+	&__text{
+		width: 728px;
+		height: 72px;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		color: rgba(31, 32, 65, 0.75)
+	}
+}
+
+
+/*range slide*/
+#amount{
+	border:0;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 15px;
+	text-align: right;
+	text-transform: uppercase;
+	color: rgba(31, 32, 65, 0.5);
+}
+
+.priceRange{
+	position: absolute;
+	left: 979px;
+	top: 143.44px;
+}
+
+#slider-range{
+	width: 266px;
+	height: 6px;
+	&> .ui-slider-range{
+		background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+	}
+
+	&> .ui-slider-handle{
+		background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+		border: 2px solid #FFFFFF;
+		border-radius: 50%;
+		width: 12px;
+		height: 12px;
+		top: -76%;
+		margin-left: -5px;
+	}
+}
+
+/*BUTTONS*/
+
+.buttonClickMe{
+	position: absolute;
+	left: 979px;
+	top: 231px;
+
+		&__one{
+			width: 99px;
+			height: 44px;
+			background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+			border-radius: 22px;
+			text-transform: uppercase;
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 12px;
+			line-height: 15px;
+			color: #fff;
+			border: none;
+
+			&:disabled{
+				opacity: 0.5;
+		}
+	}
+
+	&__two{
+			width: 99px;
+			height: 44px;
+			border-radius: 22px;
+			text-transform: uppercase;
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 12px;
+			line-height: 15px;
+			color: #BC9CFF;
+			background-color: #fff;
+			border: 2px solid #BC9CFF;
+			margin-top: 30px;
+
+			&:disabled{
+				opacity: 0.5;
+		}
+	}
+
+	&__three{
+		margin-top: 30px;
+		border: 0;
+		color: #BC9CFF;
+		text-transform: uppercase;
+		background: #fff;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+
+		&:disabled{
+			color: rgba(31, 32, 65, 0.5);
+		}
+	}
+
+	&__pay{
+		margin-top: 30px;
+		position: absolute;
+		width: 320px;
+		height: 44px;
+		background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+		border-radius: 22px;
+		border: 0;
+		text-align: center;
+		text-transform: uppercase;
+		color: #FFFFFF;
+
+		&>svg{
+			float: right;
+			width: 20px;
+			height: 20px;		
+		}
+	}
+}
+
+
+/*  paginator  */
+
+progress,sub,sup{vertical-align:baseline}button,hr,input{overflow:visible}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0} figcaption, menu,article,aside,details,figure,footer,header,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0} [hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{}button,select{text-transform:none}[type=submit], [type=reset],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+
+$hoverDuration: 170ms;
+$borderColor: #fff;
+
+
+
+.clear{
+  &:after,
+  &:before{
+    content: "";
+    display: table;
+  }
+  &:after{
+    clear: both;
+  }
+}
+.paginator{
+	left: 980px;
+	top: 540px;
+	width: 352px;
+	position: absolute;
+
+	&__title{
+		margin-bottom: 16px;
+		text-transform: uppercase;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+	}
+
+	&__text{
+		margin-bottom: 15px;
+		color: rgba(31, 32, 65, 0.75);
+		font-size: 14px;
+		line-height: 24px;
+	}
+}
+
+.pagination__wrapper{
+  left: 180px;
+  position: relative;
+  background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 17%, rgba(255,255,255,1) 83%, rgba(255,255,255,0) 100%);
+  background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 17%,rgba(255,255,255,1) 83%,rgba(255,255,255,0) 100%);
+  background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 17%,rgba(255,255,255,1) 83%,rgba(255,255,255,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+  height: 50px;
+  text-align: center;
+  transform: translate(-50%,-50%);
+  width: 357px;
+
+  &:before,
+  &:after{
+    background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, $borderColor 17%, $borderColor 83%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,$borderColor 17%,$borderColor 83%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to right,  rgba(0,0,0,0) 0%,$borderColor 17%,$borderColor 83%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=1 );
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;;
+    width: 100%;
+  }
+
+  &:before{
+    top: -1px;
+  }
+
+  &:after{
+    bottom: -1px;
+  }
+}
+
+@keyframes hoverAnimation{
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
+
+.pagination{
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @extend .clear;
+
+  li{
+    //border-left: 1px solid rgba(0,0,0,.2);
+    display: block;
+    float: left;
+    padding: 5px 5px 5px 0;
+
+    &:first-child{
+      border: none;
+    }
+  }
+
+  button,
+  span{
+    background: none;
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: rgba(31, 32, 65, 0.5);
+    display: block;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    min-width: 40px;
+    padding: 0;
+  }
+
+  button{
+    outline: none;
+    position: relative;
+    transition: all 170ms linear;
+
+    &:before{
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      border-radius: 50%;
+      content: "";
+      cursor: pointer;
+      height: 0;
+      left: 50%;
+      opacity: 0;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      transition: all $hoverDuration linear;
+      top: 50%;
+      width: 0;
+      color: #fff;
+    }
+
+    &:hover:not(.active){
+      color: #fff;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+      &:before{
+        animation: hoverAnimation ($hoverDuration * 3) linear forwards;
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    &.active{
+      color: #fff;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+  }
+
+  .prev{
+  	transform: rotate(180deg);
+  	display: none;
+  }
+
+  .prev,
+  .next{
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+	border-radius: 22px;
+	padding-top: 3px;
+  }
+}
+
+.pagination > li > a, .pagination > li > span{
+	border: 0;
+}
+
+/*
+ * EMBED STYLING
+*/
+@media (max-width: 800px){
+	html,
+	body{
+		height: 600px;
+		overflow: hidden;
+		width: 800px;
+	}
+}
+
+
+
+/*bullet list*/
+
+.bulletList{
+	position: absolute;
+	left: 979px;
+	top: 865px;
+
+	&__title{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #1F2041;
+		margin-bottom: 10px;
+	}
+	&__list:before{
+		background: rgba(31, 32, 65, 0.25);
+		width: 10px;
+		height: 10px;
+	}
+	&__list{
+		padding-left: 13px;
+
+		&-cell{
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 24px;
+			color: rgba(31, 32, 65, 0.75);
+			width: 271.14px;
+		}
+	}
+}

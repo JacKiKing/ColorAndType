@@ -1,0 +1,29 @@
+@mixin list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin bold_Montserrat{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+}
+
+@mixin flex{
+	display: flex;
+}
+
+@mixin title{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 15px;
+
+	/* identical to box height */
+	text-transform: uppercase;
+
+	/* Dark 100% */
+	color: #1F2041;
+}

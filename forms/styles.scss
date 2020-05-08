@@ -1,0 +1,813 @@
+/*@import "bootstrap/bootstrap";*/
+@import "mixins.scss";
+@import "fonts.css";
+
+/*css*/
+
+body{
+	background: #E5E5E5;
+}
+
+.logo{
+	margin: 30px;
+	width: 48px;
+	height: 48px;
+}
+
+.formFind{
+	position: absolute;
+	width: 380px;
+	height: 374px;
+	left: 140px;
+	top: 150px;
+	background: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	padding: 40px 30px 30px 30px;
+	margin-bottom: 20px;
+
+	&__left{
+		width: 150px;
+		float: left;
+		margin-right: 18px;
+	}
+
+	&__right{
+		width: 150px;
+		float: left;
+	}
+
+	&__title{
+		@include form_title;
+		background: #FFFFFF;
+		box-sizing: border-box;
+		border-radius: 4px;
+		margin-bottom: 20px;
+	}
+
+	&__label{
+		@include form__label;
+	}
+
+	&__date{
+		@include form__input;
+		width: 150px;
+		height: 44px;
+		content: "123";
+		padding: 11.5px 0 8.4px 15px;
+	}
+}
+
+.formFind__right + label{
+	@include form__label;
+	position: relative;
+	top: 20px;
+}
+
+
+.dropdown{
+	margin-top: 20px;
+
+	&__container{
+		float: right;
+		top: 4px;
+		right: 7px;
+		position: relative;
+	}
+
+	&__list{
+		display: flex;
+		width: 266px;
+		height: 44px;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.5);
+		box-sizing: border-box;
+		border-radius: 2px;
+		@include bold_Montserrat;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		margin-bottom: -16px;
+		color: rgba(31, 32, 65, 0.75);
+		padding: 12.44px 0 17.45px 15px;
+
+		&-container{
+			left: 227px;
+			position: relative;
+			top: -26px;
+			width: 40px;
+			height: 40px;
+			cursor: pointer;
+
+			&_visiters{
+				left: 281px;
+				top: -40px;
+			}
+
+			&-viewButton{
+				top: 10px;
+				position: relative;
+				right: -8px;
+				width: 18px;
+				height: 11px;
+
+			}
+
+			&_date{
+				width: 155px;
+				left: 0;
+				top: 0;
+			}
+
+			&_date > img{
+				left: -27px;
+				top: 1px;
+				position: relative;
+			}
+		}
+	
+		&_visiters{
+			background: #FFFFFF;
+			border: 1px solid rgba(31, 32, 65, 0.5);
+			box-sizing: border-box;
+			border-radius: 2px;
+			width: 320px;
+			height: 44px;
+			padding: 12.5px 0 13.5px 15px;
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 18px;
+			color: rgba(31, 32, 65, 0.75);
+
+		}
+	}
+
+	&__left{
+		float: left;
+		top: 13px;
+		position: relative;
+		margin-left: 15px;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+	}
+	&__input{
+		width: 320px;
+		height: 44px;
+		padding: 13px 0 13px 15px;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 4px;
+		@include bold_Montserrat;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		color: rgba(31, 32, 65, 0.25);
+
+		&:hover, &:focus{
+			font-size: 14px;
+			border: 1px solid rgba(31, 32, 65, 0.5);
+			color: rgba(31, 32, 65, 0.75);
+		}
+	}
+}
+.dropdown>ul>li>div, .dropdown>ul>li>div>div{
+	display: inline-block;
+}
+
+.dropdown>ul>li{
+	@include bold_Montserrat;
+	background: #FFFFFF;
+	box-sizing: border-box;
+	margin-left: -40px;
+}
+
+.input{
+	&__list{
+		top: -24px;
+		position: relative;
+		display: none;
+		width: 266px;
+		height: 119px;
+		background-color: #FFFFFF;
+		border-bottom: 1px solid rgba(31, 32, 65, 0.5);
+		border-left: 1px solid rgba(31, 32, 65, 0.5);
+		border-right: 1px solid rgba(31, 32, 65, 0.5);		
+		box-sizing: border-box;
+		list-style-type: none;
+
+		&_visiters{
+			width: 320px;
+			height: 159px;
+			top: -56px;
+			z-index: 1;
+		}
+
+		&-cell{
+			height: 33%;
+
+			&_visiters{
+				height: 37px;
+			}
+		}
+	}
+	&__date{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 4px;
+		color: rgba(31, 32, 65, 0.75);
+		padding: 11.56px 9px 8.44px 15px;
+		width: 138px;
+	}
+}
+
+.button{
+
+	&__apply{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #BC9CFF;
+		background-color: #fff;
+		border: 0;
+		padding: 19px 7px 13px 0;
+		float: right;
+		cursor: pointer;
+	}
+
+	&__reset{
+		display: none;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: rgba(31, 32, 65, 0.5);
+		background-color: #fff;
+		border: 0;
+		padding: 19px 0 13px 14px;
+		cursor: pointer;
+	}
+}
+
+.plus, .minus, #minus_0, #minus_1, #minus_2{
+	width: 30px;
+	height: 25px;
+	@include bold_Montserrat;
+	font-weight: normal;
+	font-size: 18px;
+	align-items: center;
+	text-align: center;
+	border: 1px solid rgba(31, 32, 65, 0.5);
+	border-radius: 50%;
+	color: rgba(31, 32, 65, 0.5);
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+}
+.plus, .minus, #minus_0, #minus_1, #minus_2:hover{
+	text-decoration: none;
+}
+
+.minus, #minus_0, #minus_1, #minus_2{
+	border: 1px solid rgba(31, 32, 65, 0.25);
+	color: rgba(31, 32, 65, 0.5);
+}
+#minus_0:disabled {
+	border: 1px solid red;
+}
+
+
+.buttonClickMe__pay{
+	width: 320px;
+	height: 44px;
+	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	border-radius: 22px;
+	border: 0;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+
+	&_buy{
+		margin: 20px 0 30px 0;
+	}
+
+	&>svg{
+		float: right;
+		width: 20px;
+		height: 20px;		
+	}
+}
+.buttonClickMe__book{
+		top: -14px;
+		position: relative;
+	}
+
+.buttonClickMe__singIn{
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.singUp{
+	padding: 40px 30px 30px 30px;
+	background: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	position: absolute;
+	width: 320px;
+	height: 616px;
+	left: 140px;
+	top: 564px;
+
+	&__title{
+		font-family: Quicksand;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 30px;
+		color: #1F2041;
+	}
+
+	&__input{
+		background: #FFFFFF;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		box-sizing: border-box;
+		border-radius: 4px;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		color: rgba(31, 32, 65, 0.25);
+		width: 305px;
+		height: 44px;
+		padding: 13px 0 13px 15px;
+		margin-bottom: 10px;
+	}
+
+	&__bithday{
+
+		&-label{
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 12px;
+			line-height: 15px;
+			text-transform: uppercase;
+			color: #1F2041;
+			margin-bottom: 5px;
+		}
+
+		&-input, &-mail, &-password{
+			background: #FFFFFF;
+			border: 1px solid rgba(31, 32, 65, 0.25);
+			box-sizing: border-box;
+			border-radius: 4px;
+			color: rgba(31, 32, 65, 0.25);
+			width: 320px;
+			height: 44px;
+			margin-bottom: 20px;
+			padding: 12px 0 8px 15px;
+			text-transform: uppercase;
+		}
+		&-mail, &-password{
+			text-transform: capitalize;
+			margin-bottom: 10px;
+		}	
+	}
+
+	&__singIn{
+		&-button{
+			background: #fff;
+			border: 1px solid #BC9CFF;
+			border-right: 50%;
+			color: #BC9CFF;
+			border-radius: 22px;
+			padding: 14px 26px 15px 26px;
+			margin-left: 35px;
+
+		}
+
+		&-text{
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 18px;
+
+			/* identical to box height, or 129% */
+			display: flex;
+			align-items: center;
+			text-align: center;
+			float: left;
+			color: #000000;
+		}
+	}
+}
+
+.radioButton{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	margin-bottom: 40.56px;
+}
+
+.myradio {
+  vertical-align: center;
+  width: 20px;
+  height: 20px;
+  margin: 0 3px 0 0;
+}
+.myradio + label {
+  cursor: pointer;
+}
+.myradio:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.myradio:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 28px;
+  margin-right: 20px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.myradio:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: .2px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #FFF;
+}
+.myradio:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.5);
+  opacity: 0;
+  transition: all .2s;
+}
+.myradio:checked + label:after {
+  opacity: 1;
+}
+.myradio:focus + label:before {
+  box-shadow: 0 0 3px 3px rgba(45,182,216,.3);
+}
+
+#radiotw{
+	left: 151px;
+}
+
+
+
+/*Toogle*/
+
+/* CSS rules are kept repetitive so that you can get CSS rules for each button easily :) */
+
+.toggle{
+
+	&__title{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #1F2041;
+		margin-bottom: 16px;
+	}
+	
+	&__label{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		margin-left: 50px;
+		color: rgba(31, 32, 65, 0.75);
+		top: 1px;
+		position: relative;
+	}
+}
+
+
+
+
+
+
+*
+{
+    user-select: none;
+    -webkit-tap-highlight-color:transparent;
+}
+
+*:focus
+{
+    outline: none;
+}
+
+#app-cover
+{
+    display: table;
+    width: 600px;
+    margin: 80px auto;
+    counter-reset: button-counter;
+}
+
+.toggle-button-cover
+{
+    display: table-cell;
+    position: relative;
+    width: 200px;
+    height: 140px;
+    box-sizing: border-box;
+}
+
+.button-cover
+{
+    height: 100px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px -8px #c5d6d6;
+    border-radius: 4px;
+}
+
+.button-cover:before
+{
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+}
+
+.button-cover, .knobs, .layer
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button
+{
+    position: relative;
+    top: 50%;
+    width: 40px;
+    height: 20px;
+    margin: -20px auto 0 auto;
+}
+
+.button.r, .button.r .layer
+{
+    border-radius: 100px;
+    float: left;
+
+}
+
+.button.b2
+{
+    border-radius: 2px;
+}
+
+.checkbox
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs
+{
+    z-index: 2;
+}
+
+.layer
+{
+    width: 100%;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+/* Button 1 */
+#button-1 .knobs:before
+{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    background: rgba(31, 32, 65, 0.25);
+    border-radius: 50%;
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#button-1 .checkbox:checked + .knobs:before
+{
+    content: '';
+    left: 24px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+#button-1 .checkbox:checked ~ .layer
+{
+    background-color: #fff;
+    border: 1px solid #BC9CFF;
+}
+
+#button-1 .knobs, #button-1 .knobs:before, #button-1 .layer
+{
+    transition: 0.3s ease all;
+}
+
+
+/*book*/
+
+.book{
+	position: absolute;
+	width: 320px;
+	height: 461px;
+	top: 42px;
+	left: 560px;
+	background: #fff;
+	font-size: 12px;
+	line-height: 15px;
+	padding: 40px 30px 30px 30px;
+	background: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	position: relative;
+
+	&__text{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: bold;
+
+		&-number{
+			font-family: Quicksand;
+			font-size: 17px;
+			line-height: 17px;
+			color: #1F2041;
+		}
+
+		&-type{
+			font-size: 12px;
+			line-height: 15px;
+			text-transform: uppercase;
+			color: #BC9CFF;
+			margin-right: 107px;
+		}
+
+		&-money{
+			font-size: 17px;
+			line-height: 18px;
+			color: rgba(31, 32, 65, 0.5);
+
+			&-period{
+				font-weight: normal;
+				font-size: 14px;
+			}
+			
+		}
+	}
+
+	&__result{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		color: rgba(31, 32, 65, 0.75);
+
+		&-left{
+			float: left;
+
+			&-text_last{
+				line-height: 18px;
+				margin: 0;
+				position: relative;
+				top: -33px;
+				max-width: 229px;
+			}
+
+			&-text{
+				max-width: 229px;
+
+				&-icon{
+					border: 1px solid rgba(31, 32, 65, 0.25);
+					border-radius: 50%;
+					width: 20px;
+					height: 20px;
+					text-align: center;
+					position: relative;
+					left: 216px;
+					top: -39px;
+
+					&_two{
+						top: -67px;
+					}
+				}
+			}
+		}
+
+		&-right{
+			float: right;
+			color: rgba(31, 32, 65, 0.75);
+			text-align: right;
+		}
+
+		&-final{
+			font-family: Quicksand;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 19px;
+			line-height: 24px;
+			color: #1F2041;
+			display: block ruby;
+			top: -33px;
+			position: relative;
+
+			&-zone{
+				height: 5px;
+				border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
+				width: 182px;
+			}
+		}
+	}
+}
+
+.kostil{
+	position: absolute;
+	left: 590px;
+	top: 240px;
+	width: 320px;
+}
+
+.signIn{
+	left: -21px;
+	position: relative;
+	margin-top: 40px;
+	background: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	width: 380px;
+	height: 358px;
+	padding: 40px 30px 32px 30px;
+
+	&__title{
+		font-family: Quicksand;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 30px;
+		color: #1F2041;
+		margin-top: 0;
+	}
+}
